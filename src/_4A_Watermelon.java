@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Problem Link = http://codeforces.com/problemset/problem/4/A
  * @author YektaAnıl
  */
-public class Main {
+public class _4A_Watermelon {
 
 public static void main(String arg[]) {
     Scanner sc = new Scanner(System.in);

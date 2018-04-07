@@ -1,38 +1,24 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
 
-/* 
-  Problem Link = http://codeforces.com/contest/96/problem/A
-*/
+/*Problem Link = http://codeforces.com/problemset/problem/50/A
+ * 
+ * @Author Yekta Anıl Aksoy
+ * Fast Reader class is used for making fast input / output operation
+ */
 
-public class Solution {
+public class _50A_DominoPilling {
 	static FastReader in;
 	static PrintWriter out;
 	
 	public static void Solve(){
-       String str = in.next();
-       
-       int contiguous=1;
-       for(int i = 1;i<str.length();i++){
-    	   if(str.charAt(i) == str.charAt(i-1)){
-    		   contiguous++;
-    		   if(contiguous==7){
-    			   out.println("YES");
-    			   break;
-    		   }
-    	   }
-    	   else
-    		   contiguous=1;
-    	   
-    	   if(i==str.length()-1 && contiguous!=7){
-    		   out.println("NO");
-    		   break;
-    	   }
-    	   
-    		   
-    	   
-       }
-
+		int n = in.nextInt();
+		int m = in.nextInt();
+		
+		System.out.println(n*m/2);
 	}
 	
 	public static void main(String[] args) {
@@ -105,5 +91,3 @@ public class Solution {
     }
 
 }
-
-

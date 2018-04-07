@@ -6,7 +6,7 @@ import java.util.*;
  Problem Link = http://codeforces.com/problemset/problem/282/A
 */
 
-public class Solution {
+public class _282A_BitPlusPlus {
 	static FastReader in;
 	static PrintWriter out;
 	

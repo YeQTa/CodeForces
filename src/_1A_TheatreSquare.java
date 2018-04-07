@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @author YektaAnıl
  */
  
-public class Main {
+public class _1A_TheatreSquare {
     
 
 public static void main(String arg[]) {

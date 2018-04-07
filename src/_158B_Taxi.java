@@ -1,24 +1,52 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
-/*Problem Link = http://codeforces.com/problemset/problem/50/A
- * 
- * @Author Yekta Anıl Aksoy
- * Fast Reader class is used for making fast input / output operation
- */
+/* 
+  Problem Link : http://codeforces.com/problemset/problem/158/B
+*/
 
-public class Solution {
+public class _158B_Taxi {
 	static FastReader in;
 	static PrintWriter out;
 	
 	public static void Solve(){
-		int n = in.nextInt();
-		int m = in.nextInt();
-		
-		System.out.println(n*m/2);
+       int n = in.nextInt();
+       int result=0;
+       int array[] = new int[4];
+       while(n-->0){
+    	   int num = in.nextInt();
+    	   if(num==4)
+    		   result++;
+    	   else if(num==1)
+    		   array[1]++;
+    	   else if(num==2)
+    		   array[2]++;
+    	   else
+    		   array[3]++;
+       }
+       //if # of 1's is zero, then we can just group 2's and we can add it to # of 3's
+       if(array[1]==0){
+    	   result += (int)Math.ceil((double)array[2]/2)+array[3];
+       }
+       else{
+    	   //first we deleted # of 1's or 3's(minimum one)
+    	   int min = Math.min(array[1], array[3]);
+    	   result+=min;
+    	   array[3]-=min;
+    	   array[1]-=min;
+    	   
+    	   if(array[1]==0){
+    		   result+=(int)Math.ceil((double)array[2]/2) + array[3];
+    	   }
+    	   else if(array[3]==0){
+    		   array[2]+=(int)Math.ceil((double)array[1]/2);
+    		   result+= (int)Math.ceil((double)array[2]/2);
+    	   }
+       }
+      
+       System.out.println(result);
+
+       
 	}
 	
 	public static void main(String[] args) {
@@ -91,3 +119,5 @@ public class Solution {
     }
 
 }
+
+

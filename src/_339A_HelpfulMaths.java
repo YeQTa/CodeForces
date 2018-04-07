@@ -2,18 +2,49 @@ import java.io.*;
 import java.util.*;
 
 /*
-  Problem Link : http://codeforces.com/problemset/problem/112/A
+  Problem Link : http://codeforces.com/problemset/problem/339/A
 */
 
-public class Solution {
+public class _339A_HelpfulMaths {
 	static FastReader in;
 	static PrintWriter out;
 	
 	public static void Solve(){
-       String str = in.next().toLowerCase();
-       String str2 = in.next().toLowerCase();
-       
-       out.println(str.compareTo(str2)>0?"1":str.compareTo(str2)<0?"-1":"0");
+			String str = in.next();
+			int array[] = new int[4];
+			
+			for(int i = 0;i<str.length();i+=2){
+				if(str.charAt(i)=='1'){
+					array[1]++;
+				}
+				else if(str.charAt(i)=='2'){
+					array[2]++;
+				}
+				else
+					array[3]++;
+					
+			}
+			StringBuilder result = new StringBuilder(str);
+			int index=0;
+			//setting 1's
+			for(int i = 0;i<array[1];i++){
+				result.setCharAt(index, '1');
+				index+=2;
+			}
+			
+			//setting 2's
+			for(int i = 0;i<array[2];i++){
+				result.setCharAt(index, '2');
+				index+=2;
+			}
+			
+			//setting 3's
+			for(int i = 0;i<array[3];i++){
+				result.setCharAt(index, '3');
+				index+=2;
+			}
+			out.print(result);
+		
        
 	}
 	

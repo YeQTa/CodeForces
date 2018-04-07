@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Problem Link = http://codeforces.com/problemset/problem/71/A
  * @author YektaAnıl
  */
-public class Main {
+public class _71A_WayTooLongWords {
 
 
 public static void main(String arg[]) {

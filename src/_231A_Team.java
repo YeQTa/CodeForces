@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * Fast Reader class is used for making fast input / output operation
  */
 
-public class Solution {
+public class _231A_Team {
 	static FastReader in;
 	static PrintWriter out;
 	
