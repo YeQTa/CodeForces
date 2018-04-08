@@ -1,2 +1,2 @@
 # CodeForces
-Solution of CodeFroces's Problems
+Solution of CodeForces' Problems
